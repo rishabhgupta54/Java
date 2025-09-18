@@ -17,7 +17,7 @@
  * - Instance variables are also known as Object level variables or attributes
  */
 public class Main {
-    int int1 = 10; // instance variable
+    int int1 = 10;
     int int2;
     double double1;
     boolean boolean1;
