@@ -14,6 +14,7 @@
  *   and directly from instance area (instance function)
  * - For instance variable JVM will provide the default values
  *   and we are not required to perform initialization explicitly
+ * - Instance variables are also known as Object level variables or attributes
  */
 public class Main {
     int int1 = 10; // instance variable
