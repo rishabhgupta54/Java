@@ -17,6 +17,11 @@
  * - Local array references are not initialized by JVM.
  * - Must be explicitly initialized before use, otherwise Compile-time Error.
  * - Once initialized (with new), elements get default values (0, 0.0, false, null, etc.).
+ *
+ * Important:
+ * - Once we create an array (at any level: instance, static, or local),
+ *   every array element is automatically initialized with its default value.
+ *   (int → 0, double → 0.0, boolean → false, object → null, etc.)
  */
 public class Main {
     /*
