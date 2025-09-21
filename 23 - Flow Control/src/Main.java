@@ -1,15 +1,17 @@
 /*
  * Flow Control
- * Flow Control describes the order in which the statement will be executed at the runtime
- * - Selection statement
- *      - if - else
+ * Flow control decides the order in which statements are executed at runtime.
+ *
+ * Types of flow control statements in Java:
+ * - Selection Statements
+ *      - if-else
  *      - switch
- * - Iterative Statements
+ * - Iteration Statements (Loops)
  *      - while
  *      - do-while
  *      - for
  *      - for-each
- * - Transfer control
+ * - Transfer of Control
  *      - break
  *      - continue
  *      - return
@@ -19,171 +21,178 @@
 public class Main {
     public static void main(String[] args) {
         /*
-         * Selection Statement
+         * Selection Statements
          */
 
         /*
          * if-else
-         * syntax
-         * if(condition) {
-         *      Action if condition is true
+         * Syntax:
+         * if (condition) {
+         *      // executes if condition is true
          * } else {
-         *      Action if condition is false
+         *      // executes if condition is false
          * }
-         * The argument to the if statement should be boolean type. By mistake if we are trying to provide any other type then we will get compile time error
+         *
+         * Note:
+         * - The condition must be of boolean type.
+         * - Using any other type results in a compile-time error.
          */
 
-         /*int int1 = 0;
-         if(int1) { // CE: incompatible types: int cannot be converted to boolean
-             System.out.println("int1 if condition");
-         } else {
-             System.out.println("int1 else condition");
-         }*/
+        /*int int1 = 0;
+        if (int1) { // CE: incompatible types: int cannot be converted to boolean
+            System.out.println("int1 if condition");
+        } else {
+            System.out.println("int1 else condition");
+        }*/
 
-         /*int int2 = 10;
-         if(int2 = 20) { // CE: incompatible types: int cannot be converted to boolean
-             System.out.println("int2 if condition");
-         } else {
-             System.out.println("int2 else condition");
-         }*/
+        /*int int2 = 10;
+        if (int2 = 20) { // CE: incompatible types: int cannot be converted to boolean
+            System.out.println("int2 if condition");
+        } else {
+            System.out.println("int2 else condition");
+        }*/
 
         int int3 = 10;
         if (int3 == 20) {
-            System.out.println("int3 if condition");
+            System.out.println("int3 -> if block executed");
         } else {
-            System.out.println("int3 else condition");
+            System.out.println("int3 -> else block executed");
         }
 
         boolean boolean1 = false;
         if (boolean1 = false) {
-            System.out.println("boolean1 if condition");
+            System.out.println("boolean1 -> if block executed");
         } else {
-            System.out.println("boolean1 else condition");
+            System.out.println("boolean1 -> else block executed");
         }
 
         boolean boolean2 = false;
         if (!boolean2) {
-            System.out.println("boolean2 if condition");
+            System.out.println("boolean2 -> if block executed");
         } else {
-            System.out.println("boolean2 else condition");
+            System.out.println("boolean2 -> else block executed");
         }
 
         /*
-         * else part and curly braces are optional without curly braces only 1 statement is allowed which should not be declarative statement
+         * else part and curly braces are optional.
+         * Without curly braces, only ONE statement is allowed
+         * and that statement cannot be a variable declaration.
          */
         if (true)
-            System.out.println("You can take only 1 statement here");
+            System.out.println("Single statement allowed without braces");
 
-        /*if(true)
+        /*if (true)
             int int4 = 10; // CE: variable declaration not allowed here
         */
 
         if (true) {
             int int5 = 10;
+            System.out.println("Block with curly braces is fine");
         }
 
         /*
          * Switch
-         * If several options are available then it is not recommended to use nested if-else because if reduces code readability. To handel this requirement we should go for switch statement
-         * syntax(case) {
-         *      case 1:
-         *          action 1;
-         *          brea;
-         *      case 2:
-         *          action 2
-         *          break
-         *      default:
-         *          default action
-         * }
-         * The allowed arguments type for the switch statement are char, byte, short, int until v1.4
-         * But from v1.5 onwards corrosponding wrapper (Characterm Byte, Short, Integer) and enum type is also allowed
-         * From 1.7  version onwards String type is also allowed
-         * Curly braces are mendatory except swith every where curly braces are optional
-         * Both case and default are optional i.e. an empty switch sttatement is a valud java syntax
-         * within the switch we can take default cast at most once
-         * default case will be executed if and only if there is no case matched
-         * within the switch we can write case anytwhere but it is recommended to write aa last case
+         * - Used when multiple options are available (better than nested if-else for readability).
+         * - Syntax:
+         *   switch(expression) {
+         *       case value1: action; break;
+         *       case value2: action; break;
+         *       ...
+         *       default: action;
+         *   }
+         *
+         * - Allowed types for switch expression:
+         *   v1.4 and earlier: char, byte, short, int
+         *   v1.5 onwards: corresponding wrapper classes + enum
+         *   v1.7 onwards: String also allowed
+         *
+         * Rules:
+         * - Curly braces are mandatory.
+         * - Both case and default are optional (empty switch is valid).
+         * - Only one default is allowed.
+         * - default executes only if no case matches.
          */
         int int6 = 10;
         switch (int6) {
-
         }
 
         /*
-         * inside switch every statement should be under some case or default i.e. independent statement are not allowed insite swithc otherwise we will get compile time error
+         * Independent statements are not allowed inside switch.
          */
         /*int int7 = 10;
         switch (int7) {
-            System.out.println("Hello"); // CE:
+            System.out.println("Hello"); // CE: statement not under any case or default
         }*/
 
         /*
-         * Every case label should be compile time constant
+         * Case labels must be compile-time constants.
          */
         /*int int8 = 10;
         int int9 = 20;
         switch (int8) {
             case 10:
                 System.out.println("Ten");
-            case int9: // CE:
+            case int9: // CE: case label must be constant
                 System.out.println("Twenty");
         }*/
 
         /*
-         * If we declare int9 as final then we won't get any compile time error
+         * Declaring int9 as final makes it a compile-time constant.
          */
         int int10 = 10;
         final int int9 = 20;
         switch (int10) {
             case 10:
-                System.out.println("Ten");
+                System.out.println("Case 10 matched");
             case int9:
-                System.out.println("Twenty");
+                System.out.println("Case 20 matched");
         }
 
         /*
-         * Both switch argument and case label can be expression but case label should be constant expression
+         * Both switch expression and case labels can be expressions,
+         * but case labels must be constant expressions.
          */
         int int11 = 10;
         switch (int11 + 1) {
             case 10:
-                System.out.println("Ten");
+                System.out.println("Case 10 matched");
                 break;
             case 10 + 20 + 30:
-                System.out.println("Sixty");
+                System.out.println("Case 60 matched");
                 break;
         }
 
         /*
-         * Every case label should be in the range of switch argument type otherwise we will get compile time error
+         * Case labels must be within the range of switch expression type.
          */
         /*byte byte1 = 10;
         switch (byte1) {
             case 10:
-                System.out.println("Ten");
+                System.out.println("Case 10");
                 break;
             case 100:
-                System.out.println("One Hundred");
+                System.out.println("Case 100");
                 break;
-            case 1000: // CE: incompatible types: possible lossy conversion from int to byte
-                System.out.println("One Thousand");
+            case 1000: // CE: possible lossy conversion from int to byte
+                System.out.println("Case 1000");
                 break;
         }*/
+
         byte byte2 = 10;
-        switch (byte2 + 1) { // because max(int, byte, int) = int and the return type of this expression is int. Thats why we are able to use case 1000
+        switch (byte2 + 1) { // max(int, byte, int) = int → expression type is int
             case 10:
-                System.out.println("Ten");
+                System.out.println("Case 10");
                 break;
             case 100:
-                System.out.println("One Hundred");
+                System.out.println("Case 100");
                 break;
             case 1000:
-                System.out.println("One Thousand");
+                System.out.println("Case 1000");
                 break;
         }
 
         /*
-         * Duplicate case labels are not allowed otherwise we will get compile time error
+         * Duplicate case labels are not allowed.
          */
         /*int int12 = 10;
         switch (int12) {
@@ -196,15 +205,15 @@ public class Main {
             case 99:
                 System.out.println("Ninety Nine");
                 break;
-            case 'a': // CE: duplicate case label
-                System.out.println("Ninety Seven");
+            case 'a': // CE: duplicate case label (97)
+                System.out.println("Character 'a'");
                 break;
         }*/
 
         /*
-         * Fall Through Inside Switch
-         * Within the switch if any case is matched from that case onwards all the statements will be executed until break or end of the switch. This is called fall through inside switch
-         * The main advantage of fall through inside a switch is that we can define common action for multiple cases(Code reuseability)
+         * Fall-through behavior:
+         * - If a case matches, execution continues until a break or end of switch.
+         * - Useful for grouping cases with common actions.
          */
         int int13 = 10;
         switch (int13) {
@@ -224,22 +233,26 @@ public class Main {
                 System.out.println("Case 7 to Case 9");
                 break;
             default:
-                System.out.println("Case 10 to Case 12");
+                System.out.println("Case 10 to Case 12 (default)");
         }
 
         /*
-         * Iterative Statements
+         * Iteration Statements
          */
+
         /*
-         * While
-         * if we don't know the number of iteration in advanced then we should go for While loop
-         * syntax
+         * while loop
+         * - Best choice when number of iterations is unknown.
+         * Syntax:
          * while(condition) {
          *      action
          * }
-         * the condition argument should be of boolean type. If we are trying to provide any other type then we will get compile time error
-         * curly braces are optional and without curly braces we can take only 1 statement under it which should not be a declarative statement
+         *
+         * Rules:
+         * - Condition must be boolean.
+         * - Without braces, only one statement is allowed (not a declaration).
          */
+
         /*while (1) { // CE: incompatible types: int cannot be converted to boolean
             System.out.println("While Loop");
         }*/
@@ -251,109 +264,99 @@ public class Main {
         /*int int14 = 10;
         int int15 = 20;
         while (int14 < int15) {
-            System.out.println("Hello"); // infinite loop
+            System.out.println("Infinite loop since condition always true");
         }*/
 
         /*
-         * Every final variable will be replaced by the value at the compile time only. So the below if condition will always false
+         * Final variables are replaced with values at compile time.
          */
         /*final int int16 = 10;
         final int int17 = 20;
-        while(int16 > int17) { // => while (10 > 20)
+        while (int16 > int17) { // while(10 > 20)
             System.out.println("Hello"); // CE: unreachable statement
         }*/
 
         /*
-         * If every argument is a final variable then that operation should be performed at compile time only
+         * Compile-time evaluation when all operands are final.
          */
         final int int18 = 10, int19 = 20;
         int int20 = 20;
-        System.out.println(int18 + int19); // after compilation => System.out.println(30);
-        System.out.println(int18 + int20); // after compilation => System.out.println(10 + int20);
-        System.out.println(int18 < int19); // after compilation => System.out.println(true);
-        System.out.println(int18 < int20); // after compilation => System.out.println(10 < int20);
+        System.out.println("int18 + int19 = " + (int18 + int19)); // replaced with 30
+        System.out.println("int18 + int20 = " + (int18 + int20)); // replaced with (10 + int20)
+        System.out.println("int18 < int19 = " + (int18 < int19)); // replaced with true
+        System.out.println("int18 < int20 = " + (int18 < int20)); // replaced with (10 < int20)
 
         /*
-         * do-while
-         * If we want to execute a loop body at least once then we should go for do-while
-         * syntax
+         * do-while loop
+         * - Executes at least once because condition is checked at the end.
+         * Syntax:
          * do {
-         *  action
-         * } while(condition)
-         * the condition argument should be of boolean type. If we are trying to provide any other type then we will get compile time error
-         * curly braces are optional and without curl braces we can take only 1 statement between the do and while, which should not be declarative statement.
+         *      action
+         * } while(condition);
          */
-
         do
-            System.out.println("Do While Loop will execute even if the condition is false because the condition is checked in the end that why it is said if you want to execute the loop at least once");
+            System.out.println("Do-While executes at least once even if condition is false");
         while (false);
 
         /*
-         * For
-         * it is the most commonly used loop
-         * if we know the number of iteration in advance then for loop is the best choice
-         * syntax
+         * for loop
+         * - Most commonly used loop.
+         * - Best choice when number of iterations is known in advance.
+         * Syntax:
          * for(initialization; condition; increment/decrement) {
          *      action
          * }
-         * curly braaces are optional without curly braces we can take only 1 statement  which should not be declarative statement.
-         * Initialization
-         *  - This spot will be executed only once in the loop cycle
-         *  - we can declare and initialize local variable for the loop
-         *  - we can declare any number of variables but should be of same type. By mistake if we declare different type of variables then we will get compile time error
-         *  - in the initialization section we can take any valid java statement including System.out.println
-         * Conditional Check
-         *  - We can take any valid express but should be of the type boolean
-         *  - This spot is optional and if we are not taking anything, then compilar will always place true
-         * Increment/Decrement
-         *  - we can take any valid java statement including System.out.println
-         * all three part of loop are independent of each other and optional
+         *
+         * Notes:
+         * - Initialization executes only once.
+         * - Multiple variables allowed in initialization but must be of same type.
+         * - Condition must be boolean. If omitted, compiler treats it as true.
+         * - Increment/decrement part can be any valid statement.
+         * - All three parts are optional.
          */
-
-        for (int int21 = 0; int21 < 10; int21++) {
-            System.out.println("Hello int21");
+        for (int int21 = 0; int21 < 3; int21++) {
+            System.out.println("for loop iteration: int21 = " + int21);
         }
+
         /*for (; ; ) {
-            System.out.println("Everything is optional. Internally this loop will be converted into while loop");
+            System.out.println("Infinite loop: all parts optional, works like while(true)");
         }*/
 
         /*
-         * for-each
-         * Introduced in v1.5
-         * It is specially designed to retrive elements of arrays and collections
+         * for-each loop
+         * - Introduced in Java 1.5
+         * - Specially designed for iterating over arrays and collections.
          */
-
         int[] array1 = {10, 20, 30, 40, 50};
-        for (int array : array1) {
-            System.out.println("Array value: " + array);
+        for (int value : array1) {
+            System.out.println("Array element: " + value);
         }
 
         /*
-         * Transfer Control
-         */
-        /*
-         * break
-         * we can use break statement in the following places
-         * - inside switch -  to stop fall through - which we have discussed above
-         * - indide loop - to break loop execution based on some condition
+         * Transfer of Control
          */
 
+        /*
+         * break
+         * - Used inside switch to stop fall-through.
+         * - Used inside loops to terminate execution early.
+         */
         for (int int21 = 0; int21 < 10; int21++) {
             if (int21 == 5) {
                 break;
             }
-            System.out.println("int21: " + int21);
+            System.out.println("break example -> int21 = " + int21);
         }
 
         /*
          * continue
-         * we can use continue statement inside loop to skip current iteration and continue for the next iteration
+         * - Used inside loops to skip current iteration and continue with next.
          */
         for (int int22 = 0; int22 < 10; int22++) {
             if (int22 == 5) {
                 continue;
             }
-            System.out.println("int22: " + int22);
+            System.out.println("continue example -> int22 = " + int22);
         }
     }
 }
