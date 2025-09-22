@@ -1,19 +1,33 @@
 /*
  * Strictfp Modifier (Strict Floating Point)
- * it was introduced in v1.2
- * we can declare strictfp for classes and methods but not for variables
- * Usually the results of floating point arithmetic is varied from platform to platform. If we want platform independent then we should go for strictfp modifier
- * If a method is declared as strictfp all floating point calculation in that method has to follow IEEE754 standard so that we will get platform independent results
+ * -----------------------------------------------------------------
+ * - Introduced in Java 1.2.
+ * - Can be applied to classes and methods (but NOT variables).
+ * - Purpose: To make floating-point calculations platform-independent.
  *
- * strictfp method
- * abstract modifier never talks about implementation whereas strictfp method always talk about the implementation hence abstract and strictfp combination are illegal
+ * Why?
+ * ----
+ * - Normally, floating-point results may differ across platforms (due to hardware/CPU differences).
+ * - If a method or class is declared `strictfp`, all floating-point calculations
+ *   inside it must follow the IEEE 754 standard.
+ * - This ensures consistent results across all platforms.
  *
- * strictfp class
- * if a class is declared as strictfp then every floating point calculations present in every concrete method has to follow IEEE754 standards so that we will get platform independent results
- * we can declare abstract strictfp combination for classes i.e. abstract strictfp combination is legal for classes but not for methods.
+ * strictfp Method:
+ * ----------------
+ * - All floating-point calculations in the method follow IEEE 754.
+ * - Illegal with `abstract` (because abstract means "no implementation",
+ *   while strictfp always talks about "how to implement").
+ *   → abstract strictfp method
+ *
+ * strictfp Class:
+ * ---------------
+ * - All concrete methods in the class will follow IEEE 754 for floating-point arithmetic.
+ * - Legal to combine with `abstract` at class level.
+ *   → abstract strictfp class
+ *   → abstract strictfp method
  */
 public class Main {
     public static void main(String[] args) {
-        
+        System.out.println("Strictfp demo");
     }
 }
