@@ -1,5 +1,5 @@
 /*
- * main() Method
+ * Main Method
  *
  * - Compiler does NOT check whether main() method exists in the class or not.
  * - At runtime JVM checks for main(). If not found → Runtime Exception.
