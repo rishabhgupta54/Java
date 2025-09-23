@@ -1,4 +1,4 @@
-package package2;
+package package1;
 
 public class A {
     protected void m1() {
