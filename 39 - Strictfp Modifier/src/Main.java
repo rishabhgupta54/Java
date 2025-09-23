@@ -1,6 +1,5 @@
 /*
  * Strictfp Modifier (Strict Floating Point)
- * -----------------------------------------------------------------
  * - Introduced in Java 1.2.
  * - Can be applied to classes and methods (but NOT variables).
  * - Purpose: To make floating-point calculations platform-independent.

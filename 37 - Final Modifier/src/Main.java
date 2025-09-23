@@ -1,6 +1,5 @@
 /*
  * Final Modifier
- * -----------------------------------------------------------------
  * The `final` modifier can be applied to:
  * - Classes
  * - Methods

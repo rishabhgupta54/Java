@@ -1,6 +1,5 @@
 /*
  * Abstract Modifier
- * -----------------------------------------------------------------
  * - The `abstract` modifier is applicable for classes and methods (not variables).
  *
  * Abstract Methods:

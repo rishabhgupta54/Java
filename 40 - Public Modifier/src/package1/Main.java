@@ -1,7 +1,5 @@
 /*
  * Public Modifier
- * -----------------------------------------------------------------
- * - If a method is declared as `public`, then it can be accessed from anywhere
  *   (any class, any package).
  * - BUT → The containing class itself must also be visible.
  *   i.e. Before checking method visibility, compiler first checks the class visibility.
