@@ -1,7 +1,6 @@
 /*
  * Volatile Modifier
- *
- * - 'volatile' is applicable only for variables.
+ * - volatile is applicable only for variables.
  * - It ensures **visibility** of changes made by one thread to other threads.
  * - When a variable is declared as volatile, the JVM ensures that every read/write of that variable goes directly to main memory.
  * - This prevents threads from using cached copies, reducing data inconsistency problems.
