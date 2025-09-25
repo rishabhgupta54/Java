@@ -8,7 +8,6 @@
  * - Use volatile carefully; overuse may degrade performance.
  */
 
-
 public class Main {
     public static void main(String[] args) {
         SharedData data = new SharedData();
