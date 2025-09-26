@@ -10,8 +10,10 @@
  * - Makes it easier to use the system.
  *
  * Ways to achieve abstraction in Java:
- * 1. Abstract classes (partial abstraction)
- * 2. Interfaces (full abstraction, before Java 8)
+ * 1. Abstract classes
+ * 2. Interfaces
+ *
+ * By using interfaces and abstract classes we can implement abstraction
  */
 public class Main {
     public static void main(String[] args) {
