@@ -1,6 +1,5 @@
 /*
  * Abstract Class And Interface Constructor
- *
  * - We cannot create objects for abstract classes and interfaces.
  *
  * - Abstract Class:

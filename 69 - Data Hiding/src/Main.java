@@ -1,6 +1,5 @@
 /*
  * Data Hiding
- *
  * - Outside code (external person) should not access our internal data directly.
  *   → Our internal data should not go out directly.
  *   → This OOPS feature is called Data Hiding.
