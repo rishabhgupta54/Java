@@ -1,6 +1,5 @@
 /*
  * Overriding
- *
  * Key points:
  * - Unlike methods, variables are NOT polymorphic in Java.
  * - Variable resolution is always done at **compile-time** based on the reference type.
