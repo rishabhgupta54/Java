@@ -1,5 +1,5 @@
 /*
- * Overriding and Static Methods
+ * Overriding
  *
  * - We CANNOT override a static method as a non-static method
  *   → Compile-Time Error.
@@ -13,8 +13,17 @@
  *   In Method Hiding:
  *   - Method resolution is taken care of by the compiler (based on reference type).
  *   - It is NOT runtime polymorphism.
+ *
+ * Method Hiding
+ * - Both parent and child class methods should be static
+ * - Compiler is responsible for method resolution based on reference type
+ * - It is always known as compile time polymorphism or static polymorphism or early binding
+ *
+ * Overriding
+ * - Both parent and child class methods should be non-static
+ * - JVM is always responsible for method resolution based on runtime object
+ * - It is also known as runtime polymorphism or dynamic polymorphism or late binding
  */
-
 public class Main {
     public static void main(String[] args) {
         Parent parent = new Parent();
