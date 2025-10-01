@@ -1,5 +1,3 @@
-import java.io.IOException;
-
 /*
  * Constructor
  * - If the parent class constructor throws any checked exception,
@@ -14,6 +12,9 @@ import java.io.IOException;
  *   and that may throw a checked exception. Hence, the child constructor must
  *   handle or declare it.
  */
+
+import java.io.IOException;
+
 public class Main {
     public static void main(String[] args) throws IOException {
         Child child = new Child();
