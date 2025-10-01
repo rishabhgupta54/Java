@@ -1,5 +1,5 @@
 /*
- * Default Constructor
+ * Constructor
  * - Compiler is responsible to generate default constructor (NOT JVM).
  *
  * - If we are not writing any constructor in a class, then
