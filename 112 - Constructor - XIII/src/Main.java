@@ -10,8 +10,8 @@ import java.io.IOException;
  * - Otherwise, the code will not compile.
  *
  * Why?
- * - Because every child constructor by default calls **super()** as the first line,
- *   and that may throw a checked exception. Hence the child constructor must
+ * - Because every child constructor by default calls super() as the first line,
+ *   and that may throw a checked exception. Hence, the child constructor must
  *   handle or declare it.
  */
 public class Main {
