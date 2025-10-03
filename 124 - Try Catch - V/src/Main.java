@@ -3,6 +3,8 @@
  * - The finally block is always associated with try-catch to maintain clean-up code.
  * - The specialty of the finally block is that it will always execute,
  *   irrespective of whether an exception is raised or not, and whether it is handled or not.
+ * - The only case where finally block will not execute is when the JVM exits
+ *   before reaching the finally block (for example, System.exit(0)).
  */
 public class Main {
     public static void main(String[] args) {
@@ -36,6 +38,16 @@ public class Main {
             System.out.println(arr[5]); // will throw exception
         } finally {
             System.out.println("Finally block executed (Case 3)");
+        }
+
+        System.out.println();
+
+        // Case 4: Finally block does not execute (System.exit)
+        try {
+            System.out.println("Before calling System.exit(0)");
+            System.exit(0); // Terminates JVM immediately
+        } finally {
+            System.out.println("This line will never execute (Case 4)");
         }
     }
 }
