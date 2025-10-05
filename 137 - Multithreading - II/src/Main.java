@@ -11,7 +11,7 @@
  * 2. Pass it to Thread constructor.
  * 3. Call start() → Thread internally calls run() of MyRunnable.
  *
- * Class Relationship (Vertical Diagram)
+ * Class Relationship
  *  +--------------------+
  *  |     Runnable       |  <-- Interface
  *  +--------------------+
