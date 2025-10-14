@@ -1,9 +1,9 @@
 /*
- * Multithreading - Synchronized (Class Level Lock)
+ * Multithreading
  *
- * Every class in Java has a unique lock — called the **Class Level Lock**.
+ * Every class in Java has a unique lock — called the Class Level Lock.
  *
- * If a thread wants to execute a **static synchronized** method, it must acquire
+ * If a thread wants to execute a static synchronized method, it must acquire
  * the class-level lock of that class.
  *
  * Once a thread acquires the class-level lock, it is allowed to execute
@@ -12,10 +12,10 @@
  * After method execution completes, the thread automatically releases the lock.
  *
  * While one thread is executing a static synchronized method,
- * the remaining threads are **not allowed** to execute *any* other
+ * the remaining threads are not allowed to execute *any* other
  * static synchronized method of that class simultaneously.
  *
- * However, remaining threads **can still execute**:
+ * However, remaining threads can still execute:
  *  - Normal static methods
  *  - Synchronized instance methods
  *  - Normal instance methods
