@@ -1,0 +1,4 @@
+a
+for Apple
+bcde
+BufferedWriter demo completed!
