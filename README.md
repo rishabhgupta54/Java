@@ -221,4 +221,4 @@ It is designed for learners, students, and professionals to practice and underst
 ## 📘 About
 
 This repository is a **comprehensive Java learning collection** — from basic syntax to advanced JVM internals and modern Java 8+ features.  
-Each topic includes **well-commented code**, **ASCII-style diagrams**, and **real-world explanations** for better understanding.
+Each topic includes **well-commented code** for better understanding.
