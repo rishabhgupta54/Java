@@ -223,7 +223,6 @@
  *     - Removed rt.jar and ext directories.
  *     - Replaced Extension Class Loader with Platform Class Loader.
  *     - Improved JIT and introduced AOT Compilation.
- *
  */
 
 public class Main {
